@@ -6,7 +6,7 @@
       app
       dense
       flat
-      color="#F98E45"
+      class="primary"
       dark
 
     >
@@ -45,7 +45,7 @@
 
     <v-toolbar class="mt-12" height="120px">
 
-      <div class="">
+      <div>
 
        <v-img max-width="120px" src="https://delmaro.nl/wp-content/uploads/2020/10/delmaro_logo_optimize.png" />
       </div>
@@ -69,8 +69,8 @@
 
 
       <div>
-        <div v-if="i == 0" dark :class="`mt-15 sliderSection1`">one</div>
-        <div v-if="i == 2" dark :class="`mt-15 sliderSection3`">one</div>
+        <div v-if="i == 0" dark class="mt-15 sliderSection sliderSection1 success lighten-2">one</div>
+        <div v-if="i == 2" dark class="mt-15 sliderSection sliderSection3 error">one</div>
       </div>
 
 
@@ -81,12 +81,51 @@
         <nuxt />
       </v-container>
     </v-main>
-    <v-footer
+
+  <!-- <v-footer
+      dark
+      class="mt-5"
+      app
+    >
+     <v-col cols="3">
+         <div>
+
+        <v-img max-width="120px" src="https://delmaro.nl/wp-content/uploads/2020/10/delmaro_logo_optimize.png" />
+      </div>
+      </v-col>
+       <v-col cols="3">
+         {{ new Date().getFullYear() }} — <strong>Vuetify</strong>
+      </v-col>
+       <v-col cols="3">
+         {{ new Date().getFullYear() }} — <strong>Vuetify</strong>
+      </v-col>
+       <v-col cols="3">
+         {{ new Date().getFullYear() }} — <strong>Vuetify</strong>
+      </v-col>
+
+      <v-col cols="12">
+         {{ new Date().getFullYear() }} — <strong>Vuetify</strong>
+      </v-col>
+    </v-footer> -->
+
+
+  <v-footer
+      dark
+      class="grey darken-4"
       :absolute="!fixed"
       app
     >
-      <span>&copy; {{ new Date().getFullYear() }}</span>
+    <v-col cols="3"><v-img max-width="120px" src="https://delmaro.nl/wp-content/uploads/2020/10/delmaro_logo_optimize.png" />
+    <span class="display-24">Delmaro is al jaren een vertrouwde naam als het gaat om de import en export van Zuid Amerikaanse en Latijnse delicatessen.</span>
+    <p>Al langer dan 10 jaar heeft onze groothandel kwaliteit én service hoog in het vaandel staan.</p>
+    </v-col>
+    <v-col cols="3">one</v-col>
+    <v-col cols="3">one</v-col>
+    <v-col cols="3">one</v-col>
+
+    {{ new Date().getFullYear() }} — <strong>Vuetify</strong>
     </v-footer>
+
   </v-app>
 </template>
 
@@ -121,23 +160,22 @@ export default {
 </script>
 
 <style>
-  .sliderSection1 {
+
+    .sliderSection {
 
     width:50%;
     height:150px;
-    background:#A9D04F;
+    color:white;
+    }
+
+
+    .sliderSection1 {
     opacity:0.9;
-    color:white;
-  }
+    }
 
-  .sliderSection3 {
-
-    width:50%;
-    height:150px;
-    background:red;
+    .sliderSection3 {
     opacity:0.5;
-    color:white;
-  }
+    }
 
 
 </style>
