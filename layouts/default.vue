@@ -61,6 +61,14 @@
           >
             one
           </div>
+
+           <div
+            v-if="i == 1"
+            dark
+            class="mt-15 sliderSection sliderSection3 error"
+          >
+            one
+          </div>
         </div>
       </v-carousel-item>
     </v-carousel>
