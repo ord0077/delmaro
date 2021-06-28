@@ -55,19 +55,19 @@
             one
           </div>
           <div
-            v-if="i == 2"
-            dark
-            class="mt-15 sliderSection sliderSection3 error"
-          >
-            one
-          </div>
-
-           <div
             v-if="i == 1"
             dark
             class="mt-15 sliderSection sliderSection3 error"
           >
-            one
+            two
+          </div>
+
+           <div
+            v-if="i == 2"
+            dark
+            class="mt-15 sliderSection sliderSection3 error"
+          >
+            Three
           </div>
         </div>
       </v-carousel-item>
